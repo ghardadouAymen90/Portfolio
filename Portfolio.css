@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+    /*CSS scroll animation*/
+}
+
+.navbar {
+    background: #e91e63;
+    box-shadow: 0 0px 30px rgba(233, 30, 98, 0.585);
+}
+
+.navbar-nav a {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: 'Josefin Slab', serif;
+}
+
+.navbar-nav a:hover {
+    color: rgba(10, 10, 10, 0.51);
+}
+
+.navbar-nav li:hover {
+    border-top: 1px rgba(6, 119, 154, 0.774) solid;
+    border-bottom: 1px rgba(6, 119, 154, 0.774) solid;
+}
+
+.home-section {
+    background: url('https://images.pexels.com/photos/1449082/pexels-photo-1449082.jpeg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 700px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bolder;
+}
+
+.home-inside {
+    padding-top: 150px;
+    color: rgb(255, 255, 255);
+}
+
+.home-overlay {
+    background-color: rgba(56, 56, 56, 0.571);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    /*z-index: -1;*/
+}
+
+.about-section {
+    min-height: 700px;
+    padding-top: 100px;
+    background-color: rgba(117, 115, 115, 0.265);
+}
+
+.about-section h2 {
+    color: #E91E63;
+    padding: 1px;
+    border-width: 0.1px;
+    border-top: 1px rgba(6, 119, 154, 0.774) solid;
+    border-bottom: 1px rgba(6, 119, 154, 0.774) solid;
+}
+
+.me {/*my photo*/
+    height: 200px;
+    width: auto;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.programming-language {
+    height: 50px;
+    width: auto;
+}
+
+.btn-primary {
+    background-color: #E91E63 !important;
+    border-color: whitesmoke !important;
+    width: 200px;
+    height: auto;
+}
+
+.btn-primary:hover {
+    background-color: rgb(151, 5, 54) !important;
+    border-color: whitesmoke !important;
+    font-size: 15px;
+}
+
+.portfolio-section {
+    min-height: 700px;
+    padding-top: 60px;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+
+.contact-section {
+    min-height: 500px;
+    padding-top: 150px;
+    zoom:1.1;
+    background-color: rgba(255, 255, 255, 0.265);
+}
+
+.typewriter {
+    color: rgb(194, 191, 191);
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: 1px solid #E91E63;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 1px;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(150, end), blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 75%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #E91E63;
+    }
+}
+
+/*Potfolio Animation*/
+
+.portfolio-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-width: 530px;
+    margin: auto auto 1rem;
+}
+
+.portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.portfolio-item .caption .caption-content {
+    margin: 160px 0px;
+}
+
+.portfolio-item .caption .caption-content h2 {
+    color: rgb(85, 22, 43);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.portfolio-item .caption .caption-content p {
+    font-size: 18px;
+    color: rgb(26, 4, 27);
+}
+
+.portfolio-section img {
+    height: 230px;
+    width: 550px;
+}
+
+.portfolio-item .caption {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+}
+
+.portfolio-item .caption .caption-content {
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    margin-left: 35px;
+}
+
+.portfolio-item img {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+}
+
+.portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+}
+
+.portfolio-item:hover .caption {
+    background-color: rgba(29, 128, 159, 0.9);
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+}
